@@ -33,9 +33,8 @@ Add this line to your routes in config/routes:
 
   i18n_edit_routes
 
-In app/views/layouts, add this line within the <head> element of your layout (or
-more than one layout, depending on your project), to include the required Javascript
-file:
+In app/views/layouts, add this line within the head of your layout (or more than one
+layout, depending on your project), to include the required Javascript file:
 
   = i18n_edit_assets
 
