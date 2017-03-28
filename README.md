@@ -34,9 +34,16 @@ Add this line to your routes in config/routes:
   i18n_edit_routes
 
 In app/views/layouts, add this line within the head of your layout (or more than one
-layout, depending on your project), to include the required Javascript file:
+layout, depending on your project), to include the required Javascript file. Versions
+for the Slim and ERB template languages are shown:
+
+Slim version:
 
   = i18n_edit_assets
+
+ERB version:
+
+  <%= i18n_edit_assets %>
 
 ## How It Works
 If I18N_EDIT is not set in the environment, this gem does nothing and should not
