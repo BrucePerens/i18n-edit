@@ -1,0 +1,16 @@
+.i18n_edit_attributes_menu {
+  z-index: 100; 
+  position: absolute; 
+  color: black; 
+  background-color: white; 
+  border-style: outset; 
+  border-color: black; 
+  padding: 0.25em; 
+  .h_center {
+    text-align: center;
+  }
+  th, td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}

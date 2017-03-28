@@ -1,0 +1,15 @@
+This software is copyright (C) 2017 Equipment Unit LLC, All rights reserved.
+
+SIMPLE TESTING GRANT
+
+You may combine this software with your own software, for the purpose of your testing
+and development of that software. This grant does not apply to other purposes, for
+example the integration of this software into a larger product which is distributed to
+others or performed to others as a service.
+
+If this grant is insufficient for your needs, you may alternatively apply the terms of
+the GNU AFFERO GPL 3, or you may purchase a commercial license from Equipment Unit LLC.
+
+WARNING: Dynamic linking does not insulate your work from the obligations of either
+license. This was confirmed by the decision on APIs and derivative works by the appeals
+court in Oracle v. Google.

@@ -1,0 +1,21 @@
+.i18n_edit_attributes_menu[style=@style]
+  table
+    tr
+      th
+        | Attribute
+      th
+        | Editable Text
+      th
+        | Translation Key
+    - @i18n.each do |key, value|
+      tr
+        td
+          = key
+        td
+          = t(value)
+        td
+          = value
+     
+  .h_center
+    button[type='button' class='i18n_edit_dismiss_button' onclick='i18n_edit.event_contextmenu_dismiss(null);']
+      | Dismiss
