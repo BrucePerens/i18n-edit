@@ -50,11 +50,15 @@ If I18N_EDIT is not set in the environment, this gem does nothing and should not
 harm your application or its security. When it's set, the magic happens.
 
 I18n.translate() is patched to emit a html-safe span containing the editable translation
-text, with the contenteditable attribute set. Javascript catches all of the
-internationalized attributes containing this span, removes it, and places a span
-around the HTML node instead. Javascript is used to catch editing events and requests
-to update the locale text to your rails project. A controller and routes are added to
-handle those requests.
+text, with the contenteditable attribute set. This works for internationalized texts.
+It would not work for internationalized attributes of HTML nodes, because spans in
+attributes don't parse. So our javascript catches all of the internationalized
+attributes of HTML nodes containing our special span, removes the span from the
+attribute (leaving the text), and places a special span around the HTML node which
+contains the attribute instead. Javascript is used to catch events on our special spans,
+which allow in-place editing and context menus. Our javascript posts requests to Rails
+to update the locale text that you have edited. A controller and routes are added to
+your Rails project to handle those requests.
 
 Only locale files under the root of your rails project (rather than ones in gems, etc.)
 will be edited. Locale files are replaced using the link-create-write-fsync-rename
