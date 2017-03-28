@@ -47,5 +47,5 @@ Gem::Specification.new do |s|
    # Dependency on a semantic version is too coarse to work well with something as large
    # as rails.
    s.add_runtime_dependency 'rails', '> 3'
-   # s.add_runtime_dependency 'slim-template', '~> 1'
+   s.add_runtime_dependency 'slim', '~> 3'
 end
