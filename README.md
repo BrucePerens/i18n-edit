@@ -63,24 +63,10 @@ so only someone who can read the page will be able to write the locale data.
 The i18n_edit controller will reject everything if I18N_EDIT is not set in the
 environment when you start your rails project.
 
-## Installation
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'i18n_edit'
-```
-
-And then execute:
-```bash
-$ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install i18n_edit
-```
 
 ## Contributing
+
+Write to bruce@perens.com
 
 
 ## License
@@ -95,6 +81,7 @@ others or performed to others as a service.
 
 If this grant is insufficient for your needs, you may alternatively apply the terms of
 the GNU AFFERO GPL 3, or you may purchase a commercial license from Equipment Unit LLC.
+Write to bruce@perens.com .
 
 WARNING: Dynamic linking does not insulate your work from the obligations of either
 license. This was confirmed by the decision on APIs and derivative works by the appeals
