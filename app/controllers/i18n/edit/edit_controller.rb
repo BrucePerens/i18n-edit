@@ -87,7 +87,7 @@ module I18n::Edit
         render plain: "I18_EDIT is not set in the environment.", status: 201;
         throw :abort
       elsif !token_valid?(params)
-        thorw :abort
+        throw :abort
       end
     end
 
