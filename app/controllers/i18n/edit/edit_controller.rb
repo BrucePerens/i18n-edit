@@ -6,7 +6,7 @@ module I18n::Edit
   class EditController < ApplicationController
   private
     skip_before_action :verify_authenticity_token
-    before_filter :security_check
+    before_action :security_check
 
     def self.traverse(key_locations, path, prefix, h)
       h.each do |key, value|
@@ -64,7 +64,7 @@ module I18n::Edit
          "the old text from the browser is #{old_text.inspect}, they don't match. " \
          'Refusing to write with inconsistent data. ' \
          "Your edit wasn't written.", layout: false, status: 201
-        return false;
+        return false
       end
       container[hashes_path[-1]] = text
       new_file_path = path + '.i18n_edit_new'
@@ -78,17 +78,18 @@ module I18n::Edit
       end
       File.link(path, old_file_path)
       File.rename(new_file_path, path)
-      return true;
+      return true
     end
 
   protected
     def security_check
       if ENV['I18N_EDIT'].nil?
-        render plain: "I18_EDIT is not set in the environment.", status: 201;
-        throw :abort
+        render plain: "I18_EDIT is not set in the environment.", status: 201
+        return false
       elsif !token_valid?(params)
-        throw :abort
+        return false
       end
+      return true
     end
 
   public
